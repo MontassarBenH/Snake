@@ -26,7 +26,7 @@ font = pygame.font.SysFont(None, 35)
 
 def draw_snake(snake_block, snake_list):
     for i, x in enumerate(snake_list):
-        if i == len(snake_list) - 1:  # Head of the snake
+        if i == len(snake_list) - 1: 
             pygame.draw.rect(window, green, [x[0], x[1], snake_block, snake_block])
             pygame.draw.rect(window, dark_green, [x[0], x[1], snake_block, snake_block], 2)
             
@@ -151,7 +151,7 @@ def gameLoop():
         x1 += x1_change
         y1 += y1_change
         window.fill(black)
-        pygame.draw.rect(window, gray, [0, 0, width, height], 2)  # Draw border without shrinking
+        pygame.draw.rect(window, gray, [0, 0, width, height], 2)  
         draw_apple(foodx, foody, snake_block)
         snake_head = []
         snake_head.append(x1)
